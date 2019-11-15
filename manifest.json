@@ -1,0 +1,25 @@
+{
+ "manifest_version":2,
+ "name":"counter",
+ "version":"0.1.0",
+ "description":"A simple Counter Redirecting Extension",
+
+ "browser_action": {
+    "default_title": "Counter" 
+  },
+
+  "icons": { 
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png" },
+
+  "content_scripts": [{
+    "matches": ["https://www.google.com/"],
+    "js": ["content.js"],
+    "css":["styles.css"]
+  }],
+
+ "permissions": [
+    "activeTab"
+  ]
+}
